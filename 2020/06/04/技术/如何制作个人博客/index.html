@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">如何制作个人博客 | 再聚樱花庄</title>
+  
+    <link rel="shortcut icon" href="/modules/favicon-32x32.jpg">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "再聚樱花庄";
+  mashiro_option.author_name = "再聚樱花庄";
+  mashiro_option.site_url = "https://blog.mashiro.nl";
+  mashiro_option.v_appId = "H4NQ97zh3hCctB9UwiUHnyY1-9Nh9j0Va";
+  mashiro_option.v_appKey = "dhXX2yEVi16Qr9V8ASdXuPNI";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/31596490_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/35231457_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/47621790_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/48738560_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/56385372_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/60141148_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/69821721_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/72389353_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/73991033_p0.webp,https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/74657521_p0.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://blog.mashiro.nl">
+          <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Love Shiina Mashiro forever !</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/guohoo" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="mailto:mashiro@hooblog.cn" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://space.bilibili.com/435057351" target="_blank" class="social-github" title="bilibili">
+                    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://twitter.com/Guohoo" target="_blank" class="social-github" title="twitter">
+                    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/twitter.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://t.me/Mashiro_hoo" target="_blank" class="social-github" title="telegram">
+                    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/telegram.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">再聚樱花庄</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/ACG/">
+                          <i class="fa fa-bolt" aria-hidden="true"></i>
+                          ACG
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-film faa-vertical" aria-hidden="true"></i>
+                    番组
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    异世界
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="https://wiki.mashiro.nl/">
+                          <i class="fa fas fa-book" aria-hidden="true"></i>
+                          Wiki
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://cloud.hooblog.cn/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          Cloud
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-meetup" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/49831005_p0.webp);" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/49831005_p0.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      如何制作个人博客</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://mashiro.nl">
+            <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://mashiro.nl">Mashiro</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-6-4<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <blockquote>
+<p>本文参考自<a href="https://www.himiku.com/archives/build-a-personal-blog.html" target="_blank" rel="noopener">如何快速搭建个人博客</a>，有删改</p>
+</blockquote>
+<h2 id="购买服务器-空间"><a href="#购买服务器-空间" class="headerlink" title="购买服务器(空间)"></a>购买服务器(空间)</h2><p>服务器的选择很多，国内有阿里云、腾讯云这些主机商，国外比较知名的就是VULTR、Linode、搬瓦工等。其实选择哪个都可以，看个人需求。希望小站安安稳稳，又不介意备案的，可以考虑国内主机商的学生服务器；如果有“特殊的需求”，又追求大带宽的话，建议选择国外的主机商。部分主机商是有提供“空间”这种产品的，如果只是建站的话也可以考虑，但是能做的事情就没有服务器这么多了。下面以VULTR购买VPS为例。</p>
+<p>搜索VULTR，进入注册页面，也欢迎用我的邀请链接进入<a href="https://www.vultr.com/?ref=8409200-6G" target="_blank" rel="noopener">https://www.vultr.com/?ref=8409200-6G</a>，选择Cloud Compute。</p>
+<p>进入后选择合适的套餐，一般＄3.5或者＄5那个套餐就够用了，千万不要选＄2.5那个，因为只有一个IPv6地址分配给你。地域优先选日本，新加坡，美国西海岸的城市，因为这些地方离我们较近，ping值也相对较低。系统选 <strong>CentOS8 x64</strong> (<strong>Ubuntu 18.04 x64</strong> 也可以)，点击Deploy Now创建。</p>
+<p>创建后就可以在主控制台看到VPS的IP地址，密码等信息，记下这些信息，待会连接时要用到。</p>
+<p>进行连接之前可以先测一下ping值，如果ping值不满意就创建一个新的VPS，再把旧的销毁(VULTR的服务器是按小时计费的，不用担心费用问题)。在IPIP可以测服务器在各地的ping值，地址<a href="https://www.ipip.net/" target="_blank" rel="noopener">https://www.ipip.net</a></p>
+<h2 id="用Xshell连接服务器"><a href="#用Xshell连接服务器" class="headerlink" title="用Xshell连接服务器"></a>用Xshell连接服务器</h2><p>软件下载地址<a href="https://www.netsarang.com/zh/xshell/" target="_blank" rel="noopener">https://www.netsarang.com/zh/xshell</a>，可以顺便把Xftp一起下载了，因为后面上传文件到服务器要用到。安装完成后新建一个会话，主机和密码填前面在控制台记下的。(如果是用密钥连接就不在此赘述了，Just Google it。)</p>
+<p>出现像以下这样的字样就算连接成功了，就可以敲命令啦(•̀ᴗ•́)و<br><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2020-06/xshell1.jpg" alt="出现类似\[root@xxx ~\]\#就可以了"></p>
+<h2 id="安装Lnmp"><a href="#安装Lnmp" class="headerlink" title="安装Lnmp"></a>安装Lnmp</h2><p>Lnmp是一个别人配置好的一键安装包，包含Nginx，MySQL，PHP，非常适合新手配置网站所需的环境。具体安装方法见<a href="https://lnmp.org/install.html" target="_blank" rel="noopener">Lnmp官网</a>，里面已经讲的很清楚了。如果安装过程断线了也不要紧，重连后运行 <code>screen -r lnmp</code>，让挂起的任务继续执行即可。</p>
+<h2 id="申请一个域名"><a href="#申请一个域名" class="headerlink" title="申请一个域名"></a>申请一个域名</h2><p>这里选择也很多，国内外的都可以，选一个自己喜欢的域名，找一个便宜的注册商就OK啦！下面以腾讯云为例，注册地址为<a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">https://dnspod.cloud.tencent.com</a>，按提示一步步操作即可，申请过审后就可以解析域名到你的服务器上了。</p>
+<p>解析完成后，你的服务器就能通过域名来访问。另外腾讯云上有免费的SSL证书申请，需要启用https的可以看下腾讯云的<a href="https://cloud.tencent.com/document/product/400/35244" target="_blank" rel="noopener">文档</a>。当然也可以用下一步添加网站到服务器时自动生成SSL证书等信息。</p>
+<h2 id="添加网站到服务器"><a href="#添加网站到服务器" class="headerlink" title="添加网站到服务器"></a>添加网站到服务器</h2><p>这一步在Lnmp官网也有教程，不详细解释，码字太累了(&gt;﹏&lt;)。详见<a href="https://lnmp.org/faq/lnmp-vhost-add-howto.html" target="_blank" rel="noopener">LNMP添加、删除虚拟主机及伪静态使用教程</a>，伪静态那一步选择Typecho(喜欢用Wordpress的自行选择即可)。</p>
+<p><strong>PS</strong>：Wordpress和Typecho都是博客程序，从中选一个进行架设即可。</p>
+<h2 id="安装Typecho"><a href="#安装Typecho" class="headerlink" title="安装Typecho"></a>安装Typecho</h2><p>先到<a href="https://typecho.org/" target="_blank" rel="noopener">官网</a>下载压缩包，解压后用Xftp上传到 <code>/home/wwwroot</code> 目录里面。Xftp连接和Xshell类似，只不过协议选择是SFTP，默认端口也是22。如果你已经用Xshell连上了，直接点击下图这个绿色按钮就可以建立连接了。连接后进入指定的目录，拖动文件即可完成传输。<br><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2020-06/xshell2.png" alt><br>这一步“墙裂”建议国内服务器的小伙伴不要直接下载，最好找个梯子下载到本地，然后再上传到服务器，不然速度真的太感人了(亲测，用wget命令下载的时间比装个Lnmp都要久)</p>
+<p>传输完成后就可以准备安装了，浏览器输入申请的域名，就会跳转到安装页面<br><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2020-06/typecho.png" alt><br>然后填写一些相关的信息，此处不再展开。</p>
+<h2 id="Typecho主题"><a href="#Typecho主题" class="headerlink" title="Typecho主题"></a>Typecho主题</h2><p>主题实在太多了，大家可以到一些主题站去找找。安装时用Xftp把解压后的主题传到 <code>/home/wwwroot/usr/themes</code> 目录下(具体视你网站的安装路径而定)，再回到控制台启用主题。<br>这里博主用的是<a href="https://blog.imalan.cn/archives/247/" target="_blank" rel="noopener">VOID</a>主题，Github主页<a href="https://github.com/AlanDecode/Typecho-Theme-VOID/blob/master/README.md" target="_blank" rel="noopener">AlanDecode/Typecho-Theme-VOID</a></p>
+<p>最后有问题的话欢迎大家留言，虽然博主也不一定会QAQ</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/wechatpay.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/06/06/ACG/香风智乃景品开箱/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/54257893_p0.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/54257893_p0.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                香风智乃景品开箱</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/05/22/生活/新版Edge上手体验/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/78042954_p0.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/78042954_p0.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                新版Edge上手体验</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "H4NQ97zh3hCctB9UwiUHnyY1-9Nh9j0Va",
+        appKey: "dhXX2yEVi16Qr9V8ASdXuPNI",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://mashiro.nl" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg" itemprop="image" alt="Mashiro" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://mashiro.nl" itemprop="url" rel="author">Mashiro</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>懒人，没技术，自学中......</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Mashiro<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/disqus-preloader.svg">
+      </div>
+      <p id="footerText" style="color: #666666;">&copy </p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    <a href="https://console.upyun.com/register/?invite=BkR08dGQw" target="_blank"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/upyun-logo.png" style="height:22px"></a>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- 为了更新页脚年份自己加的一段，有空再整理 -->
+<script type="text/javascript">
+  var today = new Date();
+  var todayYear = today.getFullYear();
+  document.getElementById("footerText").innerHTML += String(todayYear) + " 再聚樱花庄";
+</script>
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/video","name":"The Pet Girl of Sakurasou.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/video","name":"The Pet Girl of Sakurasou.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">再聚樱花庄</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/guohoo" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="mailto:mashiro@hooblog.cn" class="fa fa-envelope" target="_blank" style="color: #FFC078; margin-left:20px"></a>
+      
+        <a href="https://t.me/Mashiro_hoo" class="fa fa-telegram" target="_blank" style="color: #212529; margin-left:20px"></a>
+      
+        <a href="https://twitter.com/Guohoo" class="fa fa-twitter" target="_blank" style="color: #00acee; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/ACG/">
+                  <i class="fa fa-bolt" aria-hidden="true"></i>
+                  ACG
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/bangumi/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-film faa-vertical" aria-hidden="true"></i>
+            番组
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            异世界
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="https://wiki.mashiro.nl/">
+                  <i class="fa fas fa-book" aria-hidden="true"></i>
+                  Wiki
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://cloud.hooblog.cn/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  Cloud
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-meetup" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="5072834546"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

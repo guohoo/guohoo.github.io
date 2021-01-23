@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>再聚樱花庄</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.mashiro.nl/"/>
+  <updated>2021-01-23T18:22:24.419Z</updated>
+  <id>https://blog.mashiro.nl/</id>
+  
+  <author>
+    <name>Mashiro</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迁移&amp;杂谈</title>
+    <link href="https://blog.mashiro.nl/2021/01/16/%E7%94%9F%E6%B4%BB/%E8%BF%81%E7%A7%BB&amp;%E6%9D%82%E8%B0%88/"/>
+    <id>https://blog.mashiro.nl/2021/01/16/生活/迁移&amp;杂谈/</id>
+    <published>2021-01-16T15:00:07.000Z</published>
+    <updated>2021-01-23T18:22:24.419Z</updated>
+    
+    <summary type="html">
+    
+      最终还是选择拥抱静态博客 ~
+    
+    </summary>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="个人博客" scheme="https://blog.mashiro.nl/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="https://blog.mashiro.nl/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器基础安全配置</title>
+    <link href="https://blog.mashiro.nl/2020/08/19/%E6%8A%80%E6%9C%AF/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%BA%E7%A1%80%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/"/>
+    <id>https://blog.mashiro.nl/2020/08/19/技术/服务器基础安全配置/</id>
+    <published>2020-08-19T13:37:00.000Z</published>
+    <updated>2021-01-22T17:18:04.173Z</updated>
+    
+    <summary type="html">
+    
+      主要针对SSH进行的一些安全配置
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Linux" scheme="https://blog.mashiro.nl/tags/Linux/"/>
+    
+      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
+    
+      <category term="SSH" scheme="https://blog.mashiro.nl/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker容器安装软件踩坑及换源</title>
+    <link href="https://blog.mashiro.nl/2020/08/13/%E6%8A%80%E6%9C%AF/Docker%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E8%B8%A9%E5%9D%91%E5%8F%8A%E6%8D%A2%E6%BA%90/"/>
+    <id>https://blog.mashiro.nl/2020/08/13/技术/Docker容器安装软件踩坑及换源/</id>
+    <published>2020-08-13T00:23:00.000Z</published>
+    <updated>2021-01-22T17:19:58.865Z</updated>
+    
+    <summary type="html">
+    
+      记录一下，虽然不是什么技术难题
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Docker" scheme="https://blog.mashiro.nl/tags/Docker/"/>
+    
+      <category term="Linux" scheme="https://blog.mashiro.nl/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「玩卡系列」天依小柠檬联名借记IC卡</title>
+    <link href="https://blog.mashiro.nl/2020/06/22/%E7%94%9F%E6%B4%BB/%E3%80%8C%E7%8E%A9%E5%8D%A1%E7%B3%BB%E5%88%97%E3%80%8D%E5%A4%A9%E4%BE%9D%E5%B0%8F%E6%9F%A0%E6%AA%AC%E8%81%94%E5%90%8D%E5%80%9F%E8%AE%B0IC%E5%8D%A1/"/>
+    <id>https://blog.mashiro.nl/2020/06/22/生活/「玩卡系列」天依小柠檬联名借记IC卡/</id>
+    <published>2020-06-22T11:26:00.000Z</published>
+    <updated>2021-01-21T18:42:07.066Z</updated>
+    
+    <summary type="html">
+    
+      有时收集癖上来了挡都挡不住
+    
+    </summary>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="玩卡" scheme="https://blog.mashiro.nl/tags/%E7%8E%A9%E5%8D%A1/"/>
+    
+      <category term="储蓄卡" scheme="https://blog.mashiro.nl/tags/%E5%82%A8%E8%93%84%E5%8D%A1/"/>
+    
+      <category term="洛天依" scheme="https://blog.mashiro.nl/tags/%E6%B4%9B%E5%A4%A9%E4%BE%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建一个属于自己的域名邮箱</title>
+    <link href="https://blog.mashiro.nl/2020/06/21/%E7%94%9F%E6%B4%BB/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/"/>
+    <id>https://blog.mashiro.nl/2020/06/21/生活/创建一个属于自己的域名邮箱/</id>
+    <published>2020-06-20T16:17:00.000Z</published>
+    <updated>2021-01-21T18:42:10.806Z</updated>
+    
+    <summary type="html">
+    
+      配合邮件提醒插件食用更佳
+    
+    </summary>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="邮箱" scheme="https://blog.mashiro.nl/tags/%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="SMTP" scheme="https://blog.mashiro.nl/tags/SMTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「玩卡系列」快来领取你的2233花嫁卡</title>
+    <link href="https://blog.mashiro.nl/2020/06/18/%E7%94%9F%E6%B4%BB/%E3%80%8C%E7%8E%A9%E5%8D%A1%E7%B3%BB%E5%88%97%E3%80%8D%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E4%BD%A0%E7%9A%842233%E8%8A%B1%E5%AB%81%E5%8D%A1/"/>
+    <id>https://blog.mashiro.nl/2020/06/18/生活/「玩卡系列」快来领取你的2233花嫁卡/</id>
+    <published>2020-06-17T18:20:00.000Z</published>
+    <updated>2021-01-21T18:42:05.264Z</updated>
+    
+    <summary type="html">
+    
+      感觉招行应该给我打钱
+    
+    </summary>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="玩卡" scheme="https://blog.mashiro.nl/tags/%E7%8E%A9%E5%8D%A1/"/>
+    
+      <category term="储蓄卡" scheme="https://blog.mashiro.nl/tags/%E5%82%A8%E8%93%84%E5%8D%A1/"/>
+    
+      <category term="bilibili" scheme="https://blog.mashiro.nl/tags/bilibili/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义Cloudflare节点</title>
+    <link href="https://blog.mashiro.nl/2020/06/16/%E6%8A%80%E6%9C%AF/%E8%87%AA%E5%AE%9A%E4%B9%89Cloudflare%E8%8A%82%E7%82%B9/"/>
+    <id>https://blog.mashiro.nl/2020/06/16/技术/自定义Cloudflare节点/</id>
+    <published>2020-06-16T14:33:00.000Z</published>
+    <updated>2021-01-22T06:23:09.001Z</updated>
+    
+    <summary type="html">
+    
+      如果不是备案的&quot;神奇&quot;规则，才不会用Cloudflare来加速
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
+    
+      <category term="Cloudflare" scheme="https://blog.mashiro.nl/tags/Cloudflare/"/>
+    
+      <category term="CDN" scheme="https://blog.mashiro.nl/tags/CDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用VULTR的API定时备份服务器</title>
+    <link href="https://blog.mashiro.nl/2020/06/08/%E6%8A%80%E6%9C%AF/%E5%88%A9%E7%94%A8VULTR%E7%9A%84API%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://blog.mashiro.nl/2020/06/08/技术/利用VULTR的API定时备份服务器/</id>
+    <published>2020-06-08T09:33:00.000Z</published>
+    <updated>2021-01-22T17:20:59.371Z</updated>
+    
+    <summary type="html">
+    
+      既然选择了国外的服务器，就要做好万全的准备
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
+    
+      <category term="API" scheme="https://blog.mashiro.nl/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho 不显示 emoji 表情的解决方案</title>
+    <link href="https://blog.mashiro.nl/2020/06/07/%E6%8A%80%E6%9C%AF/Typecho%E4%B8%8D%E6%98%BE%E7%A4%BAemoji%E8%A1%A8%E6%83%85%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://blog.mashiro.nl/2020/06/07/技术/Typecho不显示emoji表情的解决方案/</id>
+    <published>2020-06-06T19:06:00.000Z</published>
+    <updated>2021-01-22T17:23:10.190Z</updated>
+    
+    <summary type="html">
+    
+      这其实是编码的问题
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Typecho" scheme="https://blog.mashiro.nl/tags/Typecho/"/>
+    
+      <category term="Emoji" scheme="https://blog.mashiro.nl/tags/Emoji/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>香风智乃景品开箱</title>
+    <link href="https://blog.mashiro.nl/2020/06/06/ACG/%E9%A6%99%E9%A3%8E%E6%99%BA%E4%B9%83%E6%99%AF%E5%93%81%E5%BC%80%E7%AE%B1/"/>
+    <id>https://blog.mashiro.nl/2020/06/06/ACG/香风智乃景品开箱/</id>
+    <published>2020-06-06T09:28:00.000Z</published>
+    <updated>2021-01-22T10:53:47.246Z</updated>
+    
+    <summary type="html">
+    
+      记录一下人生买的第一个手办
+    
+    </summary>
+    
+      <category term="ACG" scheme="https://blog.mashiro.nl/categories/ACG/"/>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/ACG/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="开箱" scheme="https://blog.mashiro.nl/tags/%E5%BC%80%E7%AE%B1/"/>
+    
+      <category term="手办" scheme="https://blog.mashiro.nl/tags/%E6%89%8B%E5%8A%9E/"/>
+    
+      <category term="香风智乃" scheme="https://blog.mashiro.nl/tags/%E9%A6%99%E9%A3%8E%E6%99%BA%E4%B9%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何制作个人博客</title>
+    <link href="https://blog.mashiro.nl/2020/06/04/%E6%8A%80%E6%9C%AF/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://blog.mashiro.nl/2020/06/04/技术/如何制作个人博客/</id>
+    <published>2020-06-03T17:23:00.000Z</published>
+    <updated>2021-01-21T18:42:00.072Z</updated>
+    
+    <summary type="html">
+    
+      基于CentOS8系统，搭建Typecho博客
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Typecho" scheme="https://blog.mashiro.nl/tags/Typecho/"/>
+    
+      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
+    
+      <category term="个人博客" scheme="https://blog.mashiro.nl/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新版Edge上手体验</title>
+    <link href="https://blog.mashiro.nl/2020/05/22/%E7%94%9F%E6%B4%BB/%E6%96%B0%E7%89%88Edge%E4%B8%8A%E6%89%8B%E4%BD%93%E9%AA%8C/"/>
+    <id>https://blog.mashiro.nl/2020/05/22/生活/新版Edge上手体验/</id>
+    <published>2020-05-22T08:39:00.000Z</published>
+    <updated>2021-01-22T11:12:21.674Z</updated>
+    
+    <summary type="html">
+    
+      用Edge下载Chrome的历史要结束了
+    
+    </summary>
+    
+      <category term="生活" scheme="https://blog.mashiro.nl/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Edge" scheme="https://blog.mashiro.nl/tags/Edge/"/>
+    
+      <category term="浏览器" scheme="https://blog.mashiro.nl/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+</feed>
