@@ -1,0 +1,105 @@
+home: 首页
+archives: 文章归档
+about: 关于作者
+categories: 分类
+series: 系列文章
+search: 搜索
+searchPlaceHolder: 请输入关键字
+tags: 标签
+tagcloud: 标签云
+video: 视频资源
+help: 关于本站
+links: 友情链接
+photo: 图集
+book: 悦读
+music: 音乐
+cloud: 资源
+prev: <i class="iconfont icon-back"></i>
+next: <i class="iconfont icon-right"></i>
+comment: 留言
+page: 第 %d 页
+recent_posts: 最新文章
+newer: 上一篇
+older: 下一篇
+share: 分享
+theme_by: Theme by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+connect: '联系我们'
+post_total_count: 嗯，目前共计%d篇文章
+read_more: '阅读全文'
+contents: 文章目录
+
+none: 无
+insight:
+    hint: '请输入关键词...'
+    posts: '文章'
+    pages: '页面'
+    categories: '分类'
+    tags: '标签'
+    untitled: '(无标题)'
+
+#category
+技术:
+    zh: 野生技术协会
+    en: Geek – Only for Love
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/category/coding.jpg
+生活:
+    zh: 生活
+    en: live
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/category/writing.jpg
+ACG:
+    zh: ACG
+    en: Animation, Comics and Games
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/category/36490785_p0.webp
+
+#tag
+悦读:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/reading.webp
+bilibili:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/60277048_p0.webp
+开箱:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/64799783_p0.webp
+手办:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/65261833_p0.webp
+香风智乃:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/86083540_p0.jpeg
+VULTR:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/69724359_p0.webp
+SSH:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/78104901_p0.webp
+Linux:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/78390769_p0.webp
+API:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/85411236_p0.webp
+Typecho:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/85526375_p0.webp
+个人博客:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/85699068_p0.webp
+Cloudflare:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/86164137_p0.webp
+CDN:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/86610557_p0.webp
+Emoji:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/boy.jpg
+玩卡:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/eriri.jpg
+储蓄卡:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/67832448_p0.jpeg
+洛天依:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/75554096_p27.jpeg
+邮箱:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/78087650_p0.jpeg
+SMTP:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/76423007_p0.jpeg
+Edge:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/69545730_p0.webp
+浏览器:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/browser.webp
+豫章书院:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/robot.webp
+Docker:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/87188335_p0.jpeg
+Hexo:
+    img: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/tag/hexo-5.webp

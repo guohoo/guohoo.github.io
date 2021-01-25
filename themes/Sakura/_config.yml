@@ -1,0 +1,103 @@
+# site name
+prefixName: 
+siteName: 再聚樱花庄
+# favicon and site master avatar
+favicon: /modules/favicon-32x32.jpg
+avatar: /modules/avatar.jpg
+url: https://blog.mashiro.nl
+description: Love Shiina Mashiro forever !
+cdn: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master
+pjax: 1
+# 1开启
+mathjax: 0
+
+notice: false
+lazyloadImg: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg
+
+menus:
+  首页: { path: /, fa: fa-fort-awesome faa-shake }
+  归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
+    技术: {path: /categories/技术/, fa: fa-code }, 
+    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
+    ACG: {path: /categories/ACG/, fa: fa-bolt }
+  } }
+  番组: {path: /bangumi/, fa: fa-film faa-vertical }
+  留言: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友链: { path: /links/, fa: fa-link faa-shake }
+  异世界: { path: javascript:;, fa: fa-leaf faa-wrench , submenus: {
+    Wiki: {path: https://wiki.mashiro.nl/, fa: fas fa-book},
+    Cloud: {path: https://cloud.hooblog.cn/, fa: fa-cloud-download }
+  } }
+  关于: {path: /about/, fa: fa-meetup}
+  RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+
+
+# Home page sort type: -1: newer first，1: older first.
+homePageSortType: -1
+# Home page article shown number)
+homeArticleShown: 10
+# 背景图片 更好的修改
+bg:
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/31596490_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/35231457_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/47621790_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/48738560_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/56385372_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/60141148_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/69821721_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/72389353_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/73991033_p0.webp
+  - https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/74657521_p0.webp
+
+# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass: filter-dot
+
+# startdash url, title, desc img
+startdash: false
+
+
+
+# your site build time or founded date
+siteBuildingTime: 05/17/2020
+
+#social  url, img PC端配置
+social:
+  github: {url: https://github.com/guohoo, img: /modules/github.png}
+  email: {url: mailto:mashiro@hooblog.cn, img: /modules/email.svg}
+  bilibili: {url: https://space.bilibili.com/435057351, img: /modules/bilibili.png }
+  twitter: {url: https://twitter.com/Guohoo, img: /modules/twitter.png}
+  telegram: {url: https://t.me/Mashiro_hoo, img: /modules/telegram.svg}
+
+#social  url, img 移动端配置
+msocial:
+  github: {url: https://github.com/guohoo, fa: fa-github, color: 333}
+  mail: {url: mailto:mashiro@hooblog.cn, fa: fa-envelope, color: FFC078}
+  telegram: {url: https://t.me/Mashiro_hoo, fa: fa-telegram, color: 212529}
+  twitter: {url: https://twitter.com/Guohoo, fa: fa-twitter, color: 00acee}
+
+donate:
+  alipay: /modules/alipay.jpg
+  wechat: /modules/wechatpay.png
+
+# 视频地址为https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/video/The Pet Girl of Sakurasou.mp4，配置如下
+movies:
+  url: https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/video
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: The Pet Girl of Sakurasou.mp4
+
+aplayer: 
+  id: 5072834546
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: auto
+  volume: 0.7
+  mutex: true
+
+# Valine
+valine: true
+v_appId: H4NQ97zh3hCctB9UwiUHnyY1-9Nh9j0Va
+v_appKey: dhXX2yEVi16Qr9V8ASdXuPNI
