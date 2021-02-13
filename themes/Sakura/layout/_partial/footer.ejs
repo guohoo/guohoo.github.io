@@ -16,7 +16,7 @@
         <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/disqus-preloader.svg">
       </div>
-      <p id="footerText" style="color: #666666;">&copy </p>
+      <p id="footerText" style="color: #666666;">&copy <%= date(new Date(), 'YYYY') %> 再聚樱花庄</p>
     </div>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
@@ -30,12 +30,6 @@
 
 
 
-<!-- 为了更新页脚年份自己加的一段，有空再整理 -->
-<script type="text/javascript">
-  var today = new Date();
-  var todayYear = today.getFullYear();
-  document.getElementById("footerText").innerHTML += String(todayYear) + " 再聚樱花庄";
-</script>
 <!-- <script src="/js/tocbot.js"></script> -->
 <script type="text/javascript" src="/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
