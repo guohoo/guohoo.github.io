@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">tags | 再聚樱花庄</title>
+  <title itemprop="name">Code Runner快速更改Python解释器路径 | 再聚樱花庄</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/favicon-32x32.jpg">
   
@@ -309,12 +309,102 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      
-      <!-- .entry-content -->
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg);" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Code Runner快速更改Python解释器路径</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://mashiro.nl">
+            <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://mashiro.nl">Mashiro</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-8-2<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <blockquote>
+<p>封面图：<a href="https://www.pixiv.net/artworks/87002546" target="_blank" rel="noopener">#魔女の旅々 - pixiv</a></p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前主要使用 VS Code + WSL2 进行开发，经常需要更换 Python 运行环境，但是 Code Runner 插件默认会使用 <code>python -u</code> 去执行文件，而无法和 Python 插件进行配合，所以要在配置文件中反复更改解释器路径。另外如果使用默认配置，在 WSL2 中会无法运行文件（Linux 要用 <code>python3 -u</code>，而 <code>python -u</code> 默认使用 python2 去运行），所以要把 Code Runner 运行配置更改成 <code>python3 -u</code>，并为 Windows 多配置一条名为 python3 环境变量，指向所需的解释器才能正常运行。显然这不是一个 Good idea，后来终于在 stackoverflow 找到了一个比较好的办法</p>
+<h2 id="安装-Python-插件"><a href="#安装-Python-插件" class="headerlink" title="安装 Python 插件"></a>安装 Python 插件</h2><p><del>不会吧，不会吧，不会有人用 VS Code 不装插件的吧</del></p>
+<h2 id="更改-Code-Runner-的设置"><a href="#更改-Code-Runner-的设置" class="headerlink" title="更改 Code Runner 的设置"></a>更改 Code Runner 的设置</h2><p>首先找到拓展，点击 Code Runner 的齿轮，选择拓展设置。<br>打开后右上角有一个 <strong>打开设置(json)</strong> 的按钮，点进去切换到 json 格式<br>然后定位到 <code>&quot;code-runner.executorMap&quot;</code>，修改成如下配置</p>
+<pre><code class="json">&quot;code-runner.executorMap&quot;: {
+        &quot;python&quot;: &quot;$pythonPath -u $fullFileName&quot;
+    },
+</code></pre>
+<p>$pythonPath 表示的是使用上面已经设置好的 pythonPath 的值，此值会随 python 插件更换解释器而更换<br>$fullFileName 则是引用当前 python 文件的路径</p>
+<p>最后将 <code>&quot;code-runner.runInTerminal&quot;</code> 所对应的值改为 <code>true</code>，就大功告成啦 ~</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://stackoverflow.com/questions/50689210/how-to-allow-vs-code-to-take-input-from-users" target="_blank" rel="noopener">How to allow VS Code to take input from users?</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/alipay.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/wechatpay.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2021/01/16/生活/迁移&杂谈/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/82862103_p13.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/82862103_p13.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                迁移&amp;杂谈</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
 <div id="vcomments"></div>
 <script>
@@ -330,43 +420,25 @@
   }
 </script>
 
-      <div class="single-reward">
-        <div class="reward-open">赏
-          <div class="reward-main">
-            <ul class="reward-row">
-              <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/alipay.jpg"></li>
-              <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/wechatpay.png"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
-        </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
-      <!-- #post-## -->
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg" itemprop="image" alt="再聚樱花庄" height="70" width="70"></a>
+          <a href="https://mashiro.nl" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/avatar.jpg" itemprop="image" alt="Mashiro" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://blog.mashiro.nl" itemprop="url" rel="author">再聚樱花庄</a>
+            <a href="https://mashiro.nl" itemprop="url" rel="author">Mashiro</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>Love Shiina Mashiro forever !</p>
+        <p><i class="iconfont icon-write"></i>懒人，没技术，自学中......</p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
