@@ -348,7 +348,7 @@
           <blockquote>
 <p>封面图：<a href="https://www.pixiv.net/artworks/87002546" target="_blank" rel="noopener">#魔女の旅々 - pixiv</a></p>
 </blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前主要使用 VS Code + WSL2 进行开发，经常需要更换 Python 运行环境，但是 Code Runner 插件默认会使用 <code>python -u</code> 去执行文件，而无法和 Python 插件进行配合，所以要在配置文件中反复更改解释器路径。另外如果使用默认配置，在 WSL2 中会无法运行文件（Linux 要用 <code>python3 -u</code>，而 <code>python -u</code> 默认使用 python2 去运行），所以要把 Code Runner 运行配置更改成 <code>python3 -u</code>，并为 Windows 多配置一条名为 python3 环境变量，指向所需的解释器才能正常运行。显然这不是一个 Good idea，后来终于在 stackoverflow 找到了一个比较好的办法</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前主要使用 VS Code + WSL2 进行开发，经常需要更换 Python 运行环境，但是 Code Runner 插件默认会使用 <code>python -u</code> 去执行文件，而无法和 Python 插件进行配合，所以要在配置文件中反复更改解释器路径。另外如果使用默认配置，在 WSL2 中会无法运行文件（Linux 要用 <code>python3 -u</code>，而 <code>python -u</code> 默认使用 python2 去运行），所以要把 Code Runner 运行配置更改成 <code>python3 -u</code>，并在 Windows 多配置一条 python3.exe 软链接，指向所需的解释器才能正常运行。（不建议直接将 python.exe 改名成 python3.exe，实测这样做 pip 会出问题）<br>显然这不是一个 Good idea，后来终于在 stackoverflow 找到了一个比较好的办法</p>
 <h2 id="安装-Python-插件"><a href="#安装-Python-插件" class="headerlink" title="安装 Python 插件"></a>安装 Python 插件</h2><p><del>不会吧，不会吧，不会有人用 VS Code 不装插件的吧</del></p>
 <h2 id="更改-Code-Runner-的设置"><a href="#更改-Code-Runner-的设置" class="headerlink" title="更改 Code Runner 的设置"></a>更改 Code Runner 的设置</h2><p>首先找到拓展，点击 Code Runner 的齿轮，选择拓展设置。<br>打开后右上角有一个 <strong>打开设置(json)</strong> 的按钮，点进去切换到 json 格式<br>然后定位到 <code>&quot;code-runner.executorMap&quot;</code>，修改成如下配置</p>
 <pre><code class="json">&quot;code-runner.executorMap&quot;: {
