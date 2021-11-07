@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.mashiro.nl/"/>
-  <updated>2021-08-08T11:42:23.734Z</updated>
+  <updated>2021-11-07T09:46:27.317Z</updated>
   <id>https://blog.mashiro.nl/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中科大Hackergame 2021</title>
+    <link href="https://blog.mashiro.nl/2021/11/06/%E6%8A%80%E6%9C%AF/%E4%B8%AD%E7%A7%91%E5%A4%A7Hackergame-2021/"/>
+    <id>https://blog.mashiro.nl/2021/11/06/技术/中科大Hackergame-2021/</id>
+    <published>2021-11-06T13:31:08.000Z</published>
+    <updated>2021-11-07T09:46:27.317Z</updated>
+    
+    <summary type="html">
+    
+      中科大信安赛Write Up
+    
+    </summary>
+    
+      <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="CTF" scheme="https://blog.mashiro.nl/tags/CTF/"/>
+    
+  </entry>
   
   <entry>
     <title>Code Runner快速更改Python解释器路径</title>
@@ -94,9 +114,9 @@
       <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
-    
       <category term="Linux" scheme="https://blog.mashiro.nl/tags/Linux/"/>
+    
+      <category term="VULTR" scheme="https://blog.mashiro.nl/tags/VULTR/"/>
     
       <category term="SSH" scheme="https://blog.mashiro.nl/tags/SSH/"/>
     
@@ -118,9 +138,9 @@
       <category term="技术" scheme="https://blog.mashiro.nl/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Linux" scheme="https://blog.mashiro.nl/tags/Linux/"/>
-    
       <category term="Docker" scheme="https://blog.mashiro.nl/tags/Docker/"/>
+    
+      <category term="Linux" scheme="https://blog.mashiro.nl/tags/Linux/"/>
     
   </entry>
   
