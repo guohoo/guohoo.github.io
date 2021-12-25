@@ -26,6 +26,7 @@ menus:
   友链: { path: /links/, fa: fa-link faa-shake }
   异世界: { path: javascript:;, fa: fa-leaf faa-wrench , submenus: {
     Wiki: {path: https://wiki.mashiro.nl/, fa: fas fa-book},
+    Game: {path: https://mashiro.nl/game/mikutap/index.html, fa: fas fa-gamepad},
     Cloud: {path: https://cloud.hooblog.cn/, fa: fa-cloud-download }
   } }
   关于: {path: /about/, fa: fa-meetup}

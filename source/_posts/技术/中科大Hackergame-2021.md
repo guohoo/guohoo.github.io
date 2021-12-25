@@ -69,7 +69,7 @@ date +%s    // 计算 UTC 1970-01-01 0点到现在的秒数
 那么接下来就是痛苦的英语听力环节（苦于不会修音，一开始才听出来几个单词，然后第五个词卡了好久，后来才发现是三个音节的，然而拼写表里面的单词最多也是两个音节的……所以那里是两个词，是 flag 后的 left-bracket，不是表里面的单词）
 
 原文：
-```text
+```
 Foxtrot Lima Alpha Golf left-bracket Papa Hotel Oscar November Echo Tango India Charlie Alfa Bravo right-bracket
 ```
 
