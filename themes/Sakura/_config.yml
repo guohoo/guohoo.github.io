@@ -63,7 +63,7 @@ siteBuildingTime: 05/17/2020
 
 #social  url, img PC端配置
 social:
-  github: {url: https://github.com/guohoo, img: /modules/github.png}
+  github: {url: https://github.com/guohoo, img: /modules/github.svg}
   email: {url: mailto:mashiro@hooblog.cn, img: /modules/email.svg}
   bilibili: {url: https://space.bilibili.com/435057351, img: /modules/bilibili.png }
   twitter: {url: https://twitter.com/Guohoo, img: /modules/twitter.png}
