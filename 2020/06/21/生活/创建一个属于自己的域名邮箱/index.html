@@ -430,19 +430,35 @@ IMAP：imap.ym.163.com 默认端口为：143 （如勾选ssl安全链接，端�
         
       </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "H4NQ97zh3hCctB9UwiUHnyY1-9Nh9j0Va",
-        appKey: "dhXX2yEVi16Qr9V8ASdXuPNI",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
+
+
+  <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+  <div id="waline"></div>
+  <style>
+  #waline textarea {
+      box-sizing: border-box;
+      background: url("https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/paimon-eat.webp") 100% 100% no-repeat;
   }
-</script>
+  </style>
+  <script>
+      Waline({
+            el: '#waline',
+            serverURL: 'https://waline-topaz-psi.vercel.app',
+            pageSize: '10',
+            lang: 'zh-CN',
+            requiredFields: ['nick','mail'], //设置必填项
+            placeholder: '喵帕斯～o(=•ェ•=)m',
+            visitor: 'false',
+            emoji: [
+                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/alus',
+                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/bilibili',
+                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/quyin',
+            ],
+            avatar: 'mp',
+            dark: 'auto',
+          });
+  </script>
+
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
@@ -495,7 +511,7 @@ IMAP：imap.ym.163.com 默认端口为：143 （如勾选ssl安全链接，端�
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2021 Mashiro<br>
+      &copy; 2022 Mashiro<br>
       powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -507,7 +523,7 @@ IMAP：imap.ym.163.com 默认端口为：143 （如勾选ssl安全链接，端�
         <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/other/disqus-preloader.svg">
       </div>
-      <p style="color: #666666;">&copy 2021 再聚樱花庄</p>
+      <p style="color: #666666;">&copy 2022 再聚樱花庄</p>
     </div>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
@@ -745,7 +761,7 @@ $(document).ready(function() {
       </li>
     
   </ul>
-  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021 hexo-sakura</p>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2022 hexo-sakura</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
