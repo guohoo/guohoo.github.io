@@ -428,35 +428,21 @@
         
       </section>
       
-
-
-  <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-  <div id="waline"></div>
-  <style>
-  #waline textarea {
-      box-sizing: border-box;
-      background: url("https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/paimon-eat.webp") 100% 100% no-repeat;
-      background-size: 90px 90px;
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "H4NQ97zh3hCctB9UwiUHnyY1-9Nh9j0Va",
+        appKey: "dhXX2yEVi16Qr9V8ASdXuPNI",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
   }
-  </style>
-  <script>
-      Waline({
-            el: '#waline',
-            serverURL: 'https://waline-topaz-psi.vercel.app',
-            pageSize: '10',
-            lang: 'zh-CN',
-            requiredFields: ['nick','mail'], //设置必填项
-            placeholder: '喵帕斯～o(=•ェ•=)m',
-            visitor: 'false',
-            emoji: [
-                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/alus',
-                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/bilibili',
-                'https://cdn.jsdelivr.net/gh/guohoo/blog-source@master/modules/stickers/quyin',
-            ],
-            avatar: 'mp',
-            dark: 'auto',
-          });
-  </script>
+</script>
+
+
 
 
       <section class="author-profile">
